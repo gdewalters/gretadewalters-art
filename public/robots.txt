@@ -1,0 +1,9 @@
+# You're not a robot. Why are you snooping around here?
+
+User-agent: *
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+# Sitemap: https://gretadewalters.art/sitemap.xml

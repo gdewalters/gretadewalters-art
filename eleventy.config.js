@@ -10,6 +10,16 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 
+// -----------------------------------------------------------------
+// Custom constants
+// -----------------------------------------------------------------
+
+// Clean-css
+const CleanCSS = require("clean-css");
+
+// PurgeCss
+const purgeCssPlugin = require("eleventy-plugin-purgecss");
+
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
@@ -91,6 +101,37 @@ module.exports = function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 	});
+
+	// -----------------------------------------------------------------
+	// Optimise CSS and JS payloads
+	// -----------------------------------------------------------------	
+		
+	eleventyConfig.addFilter("cssmin", function (code) {
+		return new CleanCSS({}).minify(code).styles;
+	});
+
+	eleventyConfig.addPlugin(purgeCssPlugin, {
+		// Optional: Specify the location of your PurgeCSS config
+		config: "./purgecss.config.js",
+		// Optional: Set quiet: true to suppress terminal output
+		quiet: false,
+	});
+
+    // Inline JS
+    const { minify } = require("terser");
+    eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+    code,
+    callback
+    ) {
+    try {
+        const minified = await minify(code);
+        callback(null, minified.code);
+    } catch (err) {
+        console.error("Terser error: ", err);
+        // Fail gracefully.
+        callback(null, code);
+    }
+    });
 
 	// Features to make your build faster (when you need them)
 

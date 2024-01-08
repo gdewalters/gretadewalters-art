@@ -1,0 +1,16 @@
+---
+permalink: /assets/css/gretadewalters-style.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+  {% include "caster-theme-assets/css/icons/font-awesome.min.css" %}
+  {% include "caster-theme-assets/vendors/bootstrap/css/bootstrap.min.css" %}
+  {% include "caster-theme-assets/vendors/swiper/css/swiper.min.css" %}
+  {% include "caster-theme-assets/vendors/cubeportfolio/css/cubeportfolio.min.css" %}
+  {% include "caster-theme-assets/vendors/magnific-popup/magnific-popup.css" %}
+  {% include "caster-theme-assets/css/caster-theme-style.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
+
+
+
