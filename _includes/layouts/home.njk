@@ -1,16 +1,175 @@
 ---
 layout: layouts/base.njk
 ---
-<!-- Delete this message, it will also remove the component CSS from the bundle -->
-{%- css %}{% include "public/css/message-box.css" %}{% endcss %}
-<div class="message-box">
-	<ol>
-		<li>Edit the <code>_data/metadata.js</code> with your blog’s information.</li>
-		<li>(Optional) Edit <code>eleventy.config.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-		<li>Delete this message from <code>_includes/layouts/home.njk</code>.</li>
-	</ol>
-	<p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
-</div>
-<!-- Stop deleting -->
-
-{{ content | safe }}
+			<article class="page">                                
+				<div class="entry-content">
+		
+					<div class="container">
+		
+						<div class="row m-t-140 m-t-md-125 m-t-sm-70">
+							<div class="col-lg-6 col-md-12">
+		
+								<div class="heading-block">                
+									<h1 class="block-size-1">
+										Great <span class="accent-color">design</span> is the language I speak
+									</h1>                
+								</div>
+		
+							</div>    
+		
+							<div class="col-lg-6 col-md-12">
+		
+								<div class="text-block">
+									<p>
+									{{ content | safe }}
+									</p>
+								</div>       
+		
+							</div>
+						</div>        
+		
+						<div class="row">
+		
+							<div class="col-md-12 m-t-65 m-t-md-55">                     
+		
+								<div class="caster-portfolio-wrap">
+		
+									<div class="portfolio-heading">                
+										<h2>
+											Latest Works
+										</h2>                
+									</div>
+								
+									<div id="filters-container" class="cbp-l-filters-text text-right" data-defaultfilter="*">
+										<div data-filter="*" class="cbp-filter-item cbp-filter-item-active">All</div>
+										<div data-filter=".branding" class="cbp-filter-item">Branding</div>
+										<div data-filter=".identity" class="cbp-filter-item">Identity</div>
+										<div data-filter=".print" class="cbp-filter-item">Print</div>
+									</div>
+									
+									<div id="widget-portfolio-container-grid"
+										class="cbp cbp-caption-custom-effect cbp-caption-shrink" data-loadnoofitems="1"
+										data-layoutmode="masonry" data-captionanimation="shrink" data-animationtype="sequentially" data-gapvertical="60"
+										data-gaphorizontal="30" data-displaytype="default" data-large-desktop="3" data-tablet-landscape="3"
+										data-tablet-portrait="1" data-mobile="1">
+		
+										<div class="cbp-item  branding">                                                            
+											<a class="cbp-caption cbp-lightbox" data-title="Brochure" href="assets/images/portfolio/basic/lightbox/flyer-min.jpg">
+												<div class="cbp-caption">
+													<div class="cbp-caption-defaultWrap">
+														<img width="600" height="840" src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+															data-cbp-src="assets/images/portfolio/basic/flyer-red-600x840.jpg" alt="Creative Flyer" />
+													</div>
+												</div>
+												<div class="cbp-l-grid-agency-title alignLeft">Creative Flyer</div>
+												<div class="cbp-l-grid-agency-desc alignLeft">Lightbox</div>
+												<div class="view-project">View Project</div>
+											</a>
+											<a href="assets/images/portfolio/basic/lightbox/flyer-red.jpg" class="cbp-lightbox" data-title="Brochure Two"></a>
+										</div>    
+										<div class="cbp-item  identity">
+											<a class="cbp-caption" href="portfolio-single-big-image.html">
+												<div class="cbp-caption">
+													<div class="cbp-caption-defaultWrap">
+														<img width="600" height="560" src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+															data-cbp-src="assets/images/portfolio/basic/book-600x560.jpg" alt="Book Mockup" />
+													</div>
+												</div>
+												<div class="cbp-l-grid-agency-title alignLeft">Book Mockup</div>
+												<div class="cbp-l-grid-agency-desc alignLeft">Print</div>
+												<div class="view-project">View Project</div>
+											</a>
+										</div>   
+										<div class="cbp-item  identity">
+											<a class="cbp-caption" href="portfolio-single-big-video.html">
+												<div class="cbp-caption">
+													<div class="cbp-caption-defaultWrap">
+														<img width="600" height="680" src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+															data-cbp-src="assets/images/portfolio/basic/poster-new-min.jpg" alt="Poster Design" />
+													</div>
+												</div>
+												<div class="cbp-l-grid-agency-title alignLeft">Poster Design</div>
+												<div class="cbp-l-grid-agency-desc alignLeft">Print</div>
+												<div class="view-project">View Project</div>
+											</a>
+										</div>
+										<div class="cbp-item  branding print">
+											<a class="cbp-caption" href="portfolio-single-big-slider.html">
+												<div class="cbp-caption">
+													<div class="cbp-caption-defaultWrap">
+														<img width="600" height="520" src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+															data-cbp-src="assets/images/portfolio/basic/magazine-min-600x520.jpg" alt="Magazine Cover" />
+													</div>
+												</div>
+												<div class="cbp-l-grid-agency-title alignLeft">Magazine Cover</div>
+												<div class="cbp-l-grid-agency-desc alignLeft">Slider</div>
+												<div class="view-project">View Project</div>
+											</a>
+										</div>
+										<div class="cbp-item  branding identity">
+											<a class="cbp-caption" href="portfolio-single-big-gallery.html">
+												<div class="cbp-caption">
+													<div class="cbp-caption-defaultWrap">
+														<img width="600" height="680" src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+															data-cbp-src="assets/images/portfolio/basic/purple-poster-min.jpg"  alt="Yellow Poster" />
+													</div>
+												</div>
+												<div class="cbp-l-grid-agency-title alignLeft">Yellow Poster</div>
+												<div class="cbp-l-grid-agency-desc alignLeft">Branding</div>
+												<div class="view-project">View Project</div>
+											</a>
+										</div>
+										<div class="cbp-item  branding">
+											<a class="cbp-caption" href="portfolio-single-big-multimedia.html">
+												<div class="cbp-caption">
+													<div class="cbp-caption-defaultWrap">
+														<img width="600" height="680" src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+															data-cbp-src="assets/images/portfolio/basic/coffee-cup-min-600x680.jpg" alt="Coffee Cup" />
+													</div>
+												</div>
+												<div class="cbp-l-grid-agency-title alignLeft">Coffee Cup</div>
+												<div class="cbp-l-grid-agency-desc alignLeft">Gallery</div>
+												<div class="view-project">View Project</div>
+											</a>
+										</div>
+										<div class="cbp-item branding identity">
+											<a class="cbp-caption cbp-lightbox" data-title="Motion Graphic" href="https://www.youtube.com/watch?v=2Gg6Seob5Mg">
+												<div class="cbp-caption">
+													<div class="cbp-caption-defaultWrap">
+														<img width="600" height="440" src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+															data-cbp-src="assets/images/portfolio/basic/motion-graphics-min-600x440.jpg" alt="Motion Graphic" />                                                                                                    
+													</div>
+												</div>
+												<div class="cbp-l-grid-agency-title alignLeft">Motion Graphic</div>
+												<div class="cbp-l-grid-agency-desc alignLeft">Video</div>
+												<div class="view-project">View Project</div>
+											</a>
+										</div>                               
+										
+									</div>
+									<!--End #widget-portfolio-container-grid-->                  
+								
+								</div>  <!--End .caster-portfolio-wrap -->  
+		
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-12 m-t-110 m-b-140">
+		
+								<div class="cta">
+									<div class="cta-background-text">			
+												GET IN TOUCH								
+										<a href="mailto:hello@example.com" title="Email Us">
+											hello@example.com
+										</a>						
+									</div>
+								</div>      
+								
+							</div>
+						</div>        
+						
+					</div>
+		
+				</div>
+			</article>
