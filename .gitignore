@@ -1,5 +1,5 @@
-# 11ty Dev
+# Eleventy dev
 _site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+package-lock.json
+.DS_Store
+_drafts/
